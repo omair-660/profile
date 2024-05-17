@@ -245,7 +245,7 @@ position: relative;
     left: 0;
 }
 .work .layer {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.8);
     opacity: 0;
     transition: 0.7s;
     transform: rotateY(180deg) scale(0);
