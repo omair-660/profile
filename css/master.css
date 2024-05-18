@@ -64,7 +64,7 @@ header.bg{
     transition: 0.5s;
     right: 15px;
     bottom: 15px;
-    transform: translateY(20px);
+    transform: translateY(30px);
 opacity: 0;
 }
 .up:hover{
@@ -245,10 +245,10 @@ position: relative;
     left: 0;
 }
 .work .layer {
-    background: rgba(0,0,0,0.8);
+    background: #000000cc;
     opacity: 0;
-    transition: 0.7s;
     transform: rotateY(180deg) scale(0);
+    transition: 0.7s;
 }
 .work .box:hover .layer {
     opacity: 1;
@@ -257,12 +257,12 @@ position: relative;
 .work .box h6{
     transform: translateY(-20px);
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.7s;
 }
 .work .box .icon{
     transform: translateY(20px);
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.7s;
 }
 .work .box:hover .icon,
 .work .box:hover h6{
@@ -383,6 +383,18 @@ i#openColor {
     cursor: pointer;
     font-size: 32px;
 }
+i#openColor::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background: var(--main-color);
+    border-radius: 50%;
+    transition: 0.5s;
+}
 i#openColor.open{
     transform:rotate(360deg);
 }
@@ -408,7 +420,7 @@ i#openColor.open{
 .work .box .icon a::before {
     position: absolute;
     content:"" ;
-    bottom: -14px;
+    bottom: -15.2px;
     left: 50%;
     transform: translateX(-93%);
     border-bottom: 15px solid
@@ -467,4 +479,32 @@ i#openColor.open{
 }
 body.anim{
     overflow:visible;
+}
+nav #span{
+    position: relative;
+    width: 32px;
+}
+nav #span span{
+    background-color:var(--main-color);
+    width: 100%;
+    height: 3px;
+    position: absolute;
+}
+nav #span span:nth-child(1){
+   top: -8px;
+}
+nav #span span:nth-child(2){
+   top: 2px;
+}
+nav #span span:nth-child(3){
+  top: 13px; 
+}
+nav #span #span2{
+    width: 70%;
+}
+nav #span #span2.open{
+    width: 100%;
+}
+div#navbarSupportedContent {
+    text-align: center;
 }

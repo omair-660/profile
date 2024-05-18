@@ -209,3 +209,9 @@ openColor.onclick = function(){
   openColor.classList.toggle("open");
 }
 
+var span = document.getElementById("span");
+var span2 = document.getElementById("span2");
+
+span.onclick = function(){
+  span2.classList.toggle("open");
+}
