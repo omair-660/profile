@@ -224,3 +224,7 @@ var span2 = document.getElementById("span2");
 span.onclick = function(){
   span2.classList.toggle("open");
 }
+var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+  target: '#navbar',
+  offset: 74,
+})
