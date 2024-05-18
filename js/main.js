@@ -162,38 +162,47 @@ let color2 = document.getElementById("color2");
 let color3 = document.getElementById("color3");
 let body = document.getElementsByTagName("body")[0];
 
-color0.onclick = function(){
+color0.onclick = function() {
   body.classList.add("color0");
-
   body.classList.remove("color1");
   body.classList.remove("color2");
   body.classList.remove("color3");
-}
-color1.onclick = function(){
+  localStorage.setItem("color", "color0");
+};
+
+color1.onclick = function() {
   body.classList.add("color1");
-
   body.classList.remove("color0");
   body.classList.remove("color2");
   body.classList.remove("color3");
-}
-color2.onclick = function(){
+  localStorage.setItem("color", "color1");
+};
+
+color2.onclick = function() {
   body.classList.add("color2");
-
   body.classList.remove("color0");
   body.classList.remove("color1");
   body.classList.remove("color3");
-}
-color3.onclick = function(){
-  body.classList.add("color3");
+  localStorage.setItem("color", "color2");
+};
 
+color3.onclick = function() {
+  body.classList.add("color3");
   body.classList.remove("color0");
-  body.classList.remove("color2");
   body.classList.remove("color1");
-}
+  body.classList.remove("color2");
+  localStorage.setItem("color", "color3");
+};
+
+
 
 let load = document.getElementById("load");
 
 addEventListener("load", (event) => {
+  let savedColor = localStorage.getItem("color");
+  if (savedColor) {
+    body.classList.add(savedColor);
+  }
   if (load) {
     load.classList.add("anim"); 
     body.classList.add("anim"); 
