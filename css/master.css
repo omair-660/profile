@@ -471,6 +471,7 @@ i#openColor::after {
     background: var(--main-color);
     border-radius: 50%;
     transition: 0.5s;
+    border: 2px dashed #121212;
 }
 
 i#openColor.open {
@@ -631,4 +632,10 @@ div#navbarSupportedContent {
 ::selection {
     background-color: rgba(0, 0, 0, 0.5);
     color: var(--main-color);
+}
+
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
 }
